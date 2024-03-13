@@ -1,14 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './components/pages/dashboard/Dashboard';
+import './App.css';
+import MainDash from './components/MainDash/MainDash';
+import NavBar from './components/NavBar/NavBar';
 
-const App: React.FC = () => (
-	<BrowserRouter>
-		<Routes>
-			<Route path="/" element={<Dashboard />} />
-			{/* <Route path="users/:id" element={<Users />} /> */}
-		</Routes>
-	</BrowserRouter>
-);
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <div className='AppGlass'>
+        <NavBar/>
+        <MainDash/>
+      </div>
+    </div>
+  );
+}
 
 export default App;
