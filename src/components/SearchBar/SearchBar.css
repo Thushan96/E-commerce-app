@@ -1,0 +1,10 @@
+.searchItem {
+  width: 70%;
+  background: white;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from "../../assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import './NavBar.css';
-import { SidebarData } from '../../Data/Data';
 import { PiSignOut } from "react-icons/pi";
 import { motion } from "framer-motion";
+import { SidebarData } from '../../services/data';
 
 interface SidebarDataItem {
   icon: React.ElementType;

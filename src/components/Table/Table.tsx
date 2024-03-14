@@ -48,26 +48,28 @@ const makeStyle = (status: string) => {
 const BasicTable: React.FC = () => {
   return (
     <div className="Table">
-      <h3>Recent Orders</h3>
       <TableContainer
         component={Paper}
-        style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
+        style={{
+          boxShadow: "0px 13px 20px 0px #80808029",
+        }}
       >
         <Table sx={{ minWidth: 400 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>PRODUCT</TableCell>
-              <TableCell align="left">QUANTITY</TableCell>
-              <TableCell align="left">UNIT PRICE</TableCell>
-              <TableCell align="left">LINE PRICE</TableCell>
-              
+              <TableCell align="left">TRACKING ID</TableCell>
+              <TableCell align="left">DATE</TableCell>
+              <TableCell align="left">STATUS</TableCell>
             </TableRow>
           </TableHead>
           <TableBody style={{ color: "white" }}>
             {rows.map((row) => (
               <TableRow
                 key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                }}
               >
                 <TableCell component="th" scope="row">
                   {row.name}
@@ -75,9 +77,10 @@ const BasicTable: React.FC = () => {
                 <TableCell align="left">{row.trackingId}</TableCell>
                 <TableCell align="left">{row.date}</TableCell>
                 <TableCell align="left">
-                  <span className="status" style={makeStyle(row.status)}>{row.status}</span>
+                  <span className="status" style={makeStyle(row.status)}>
+                    {row.status}
+                  </span>
                 </TableCell>
-               
               </TableRow>
             ))}
           </TableBody>
@@ -86,5 +89,6 @@ const BasicTable: React.FC = () => {
     </div>
   );
 };
+
 
 export default BasicTable;

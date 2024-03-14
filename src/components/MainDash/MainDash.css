@@ -1,20 +1,25 @@
-.MainDash{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: blue;
+.MainDash {
+  display: flex;
+  flex-direction: column;
+ margin-bottom: 2rem; 
+}
+
+.search-bar {
+  margin-top: 6rem;
+}
+
+.table-container {
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 1200px) {
-    .MainDash{
-        justify-content:flex-start;
-        margin-top: 2rem;
-    }
+  .MainDash {
+    justify-content: flex-start;
+  }
 }
 
-@media screen and (max-width: 768px)
-{
-    .MainDash{
-        align-items: center;
-    }
+@media screen and (max-width: 768px) {
+  .MainDash {
+    align-items: center;
+  }
 }

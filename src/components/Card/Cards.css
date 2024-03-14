@@ -1,0 +1,27 @@
+.main-card{
+height: 50%;
+}
+
+.card-container {
+  width: 80%;
+  height:500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f4f4f4;
+  gap: 1.5rem;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px; 
+}
